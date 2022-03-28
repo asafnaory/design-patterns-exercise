@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const chat_client_1 = require("./chat-client");
+const AES_1 = require("./encryption-styles/AES");
+const DES_1 = require("./encryption-styles/DES");
+const chatClient1 = new chat_client_1.ChatClient(new AES_1.AES());
+chatClient1.send("Hello!");
+chatClient1.send("my name is Asaf!");
+const chatClient2 = new chat_client_1.ChatClient(new DES_1.DES());
+chatClient2.send("Hello!");
+chatClient2.send("my name is Asaf!");
